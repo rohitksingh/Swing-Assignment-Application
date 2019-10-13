@@ -2,7 +2,10 @@
 public abstract class CourseMenu {
 	
 	public void showMenu() {
-		
+		showAddButton();
+		showViewButton();
+		showRadios();
+		showLabels();
 	}
 	
 	public void showComboxes() {
