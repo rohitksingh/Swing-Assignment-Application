@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import factories.PersonFactory;
+import iterators.CourseIterator;
 import iterators.ListIterator;
 import users.Instructor;
 import users.Person;
@@ -27,11 +28,24 @@ public class Facade {
 	
 	private Person thePerson;
 	
-	private Scanner sc;
+	private Scanner sc = new Scanner(System.in);
+	
+	public Facade() {
+		initResources();
+	}
 	
 	
 	public void login() {
+		System.out.println("Welcome to HASC System");
+		System.out.println("You are? \n0) Student\n1) Instructor");
+		UserType = sc.nextInt();
 		
+		if(UserType==0||UserType==1) {
+			createCourseList();
+			selectCourse();
+		}else {
+			System.out.println("Invalid input");
+		}
 	}
 	
 	public void addAssignment() {
@@ -81,9 +95,11 @@ public class Facade {
 		int index = 0;
 		System.out.println("Course list:");
 		
+		ListIterator iterator = new CourseIterator(theCourseList);
+		
 		// Use of Iterator Pattern
-		while(listIterator.hasNext()) {
-			System.out.println(index++ +""+ listIterator.next());
+		while(iterator.hasNext()) {
+			System.out.println(index++ +") "+ iterator.next());
 		}
 		
 		System.out.println("Select the course.");
@@ -96,6 +112,10 @@ public class Facade {
 	
 	public void courseOperation() {
 		thePerson.createCourseMenu();
+	}
+	
+	private void initResources() {
+		
 	}
 	
 	
