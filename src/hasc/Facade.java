@@ -38,8 +38,8 @@ public class Facade {
 	
 	public void login() {
 		Login login = new Login();
-		login.loadWelcomePage();
-		
+		login.login();
+		createUser();
 	}
 	
 	public void addAssignment() {
