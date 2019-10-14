@@ -3,14 +3,11 @@ package hasc;
 public abstract class CourseMenu {
 	
 	public void showMenu() {
-		showAddButton();
-		showViewButton();
-		showRadios();
-		showLabels();
+		System.out.println("CourseMenu");
 	}
 	
 	public void showComboxes() {
-		
+		System.out.println("This is combox");
 	}
 	
 	public abstract void showAddButton();

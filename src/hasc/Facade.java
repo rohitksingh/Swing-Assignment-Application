@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import factories.PersonFactory;
 import iterators.ListIterator;
 import users.Instructor;
 import users.Person;
@@ -58,11 +59,9 @@ public class Facade {
 	}
 	
 	public void createUser() {
-		if(UserType == Facade.USER_STUDENT) {
-			thePerson = new Student();
-		}else if(UserType == Facade.USER_INSTRUCTOR) {
-			thePerson = new Instructor();
-		}
+		
+		// Use of factory method design pattern
+		thePerson = PersonFactory.getPerson(UserType);
 	}
 	
 	
@@ -81,6 +80,8 @@ public class Facade {
 		
 		int index = 0;
 		System.out.println("Course list:");
+		
+		// Use of Iterator Pattern
 		while(listIterator.hasNext()) {
 			System.out.println(index++ +""+ listIterator.next());
 		}

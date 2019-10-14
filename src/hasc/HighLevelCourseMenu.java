@@ -2,28 +2,26 @@ package hasc;
 
 public class HighLevelCourseMenu extends CourseMenu{
 
+	
 	@Override
 	public void showAddButton() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Show: HLC");
 	}
 
 	@Override
 	public void showViewButton() {
-		// TODO Auto-generated method stub
+		System.out.println("View: HLC");
 		
 	}
 
 	@Override
 	public void showRadios() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Radios: HLC");
 	}
 
 	@Override
 	public void showLabels() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Labels: HLC");
 	}
 	
 

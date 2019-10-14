@@ -1,16 +1,25 @@
 package users;
 
+import factories.CourseMenuFactory;
+import hasc.CourseMenu;
+
 public class Instructor extends Person{
+
 
 	@Override
 	public void showMenu() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Menu for Instructor");
+		theCourseMenu.showMenu();
+		showAddButton();
+		showViewButton();
+		showRadios();
+		showComboxes();
+		showLabels();
 	}
 
 	@Override
 	public void createCourseMenu() {
-		// TAccording to the course type create a concrete implementation
+		theCourseMenu = CourseMenuFactory.getCourseMenu(courseLevel);
 	}
 
 }
