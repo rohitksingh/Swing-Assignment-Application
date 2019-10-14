@@ -1,6 +1,9 @@
+package hasc;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
+import iterators.ListIterator;
 import users.Instructor;
 import users.Person;
 import users.Student;
@@ -8,18 +11,23 @@ import users.Student;
 public class Facade {
 		
 	private int UserType;
-	private static final int USER_STUDENT = 0;
-	private static final int USER_INSTRUCTOR = 1;
+	public static final int USER_STUDENT = 0;
+	public static final int USER_INSTRUCTOR = 1;
 	
-	private int theSelectedCurse;
+	private String theSelectedCurse;
 	
 	private int nCourseLevel;
-	private static final int HIGH_COURSE_LEVEL = 0;
-	private static final int LOW_COURSE_LEVEL = 1;
+	public static final int HIGH_COURSE_LEVEL = 0;
+	public static final int LOW_COURSE_LEVEL = 1;
 	
 	private List<String> theCourseList;
 	
+	private ListIterator listIterator;
+	
 	private Person thePerson;
+	
+	private Scanner sc;
+	
 	
 	public void login() {
 		
@@ -70,6 +78,18 @@ public class Facade {
 	}
 	
 	public void selectCourse() {
+		
+		int index = 0;
+		System.out.println("Course list:");
+		while(listIterator.hasNext()) {
+			System.out.println(index++ +""+ listIterator.next());
+		}
+		
+		System.out.println("Select the course.");
+		
+		int selection = sc.nextInt();
+		System.out.println("Selected Course is: "+theCourseList.get(selection));
+		theSelectedCurse = theCourseList.get(selection);
 		
 	}
 	

@@ -1,5 +1,6 @@
+package hasc;
 
-public class HighLevelCourseMenu extends CourseMenu{
+public class LowLevelCourseMenu extends CourseMenu{
 
 	@Override
 	public void showAddButton() {
@@ -24,6 +25,5 @@ public class HighLevelCourseMenu extends CourseMenu{
 		// TODO Auto-generated method stub
 		
 	}
-	
 
 }
