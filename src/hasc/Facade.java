@@ -6,19 +6,20 @@ import java.util.Scanner;
 import factories.PersonFactory;
 import iterators.CourseIterator;
 import iterators.ListIterator;
+import login.Login;
 import users.Instructor;
 import users.Person;
 import users.Student;
 
 public class Facade {
 		
-	private int UserType;
+	public static int UserType;
 	public static final int USER_STUDENT = 0;
 	public static final int USER_INSTRUCTOR = 1;
 	
 	private String theSelectedCurse;
 	
-	private int nCourseLevel;
+	public static int nCourseLevel;
 	public static final int HIGH_COURSE_LEVEL = 0;
 	public static final int LOW_COURSE_LEVEL = 1;
 	
@@ -26,7 +27,7 @@ public class Facade {
 	
 	private ListIterator listIterator;
 	
-	private Person thePerson;
+	public Person thePerson;
 	
 	private Scanner sc = new Scanner(System.in);
 	
@@ -36,16 +37,9 @@ public class Facade {
 	
 	
 	public void login() {
-		System.out.println("Welcome to HASC System");
-		System.out.println("You are? \n0) Student\n1) Instructor");
-		UserType = sc.nextInt();
+		Login login = new Login();
+		login.loadWelcomePage();
 		
-		if(UserType==0||UserType==1) {
-			createCourseList();
-			selectCourse();
-		}else {
-			System.out.println("Invalid input");
-		}
 	}
 	
 	public void addAssignment() {
@@ -115,7 +109,7 @@ public class Facade {
 	}
 	
 	private void initResources() {
-		
+		createCourseList();
 	}
 	
 	
