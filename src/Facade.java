@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import users.Instructor;
+import users.Person;
+import users.Student;
+
 public class Facade {
 		
 	private int UserType;

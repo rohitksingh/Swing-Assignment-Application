@@ -1,7 +1,6 @@
+package users;
 
 public abstract class Person {
-
-	private CourseMenu theCourseMenu;
 	
 	public abstract void showMenu();
 	
