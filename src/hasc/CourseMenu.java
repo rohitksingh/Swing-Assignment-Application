@@ -4,6 +4,11 @@ public abstract class CourseMenu {
 	
 	public void showMenu() {
 		System.out.println("CourseMenu");
+		showAddButton();
+		showViewButton();
+		showRadios();
+		showLabels();
+		showComboxes();
 	}
 	
 	public void showComboxes() {

@@ -1,7 +1,10 @@
 package users;
 
+import assignments.AssignmentMenu;
+import factories.AssignmentMenuFactory;
 import factories.CourseMenuFactory;
 import hasc.CourseMenu;
+import hasc.Facade;
 
 public abstract class Person {
 	
@@ -13,24 +16,23 @@ public abstract class Person {
 	public abstract void createCourseMenu();
 	
 	public void showAddButton() {
-		
-		theCourseMenu.showAddButton();
+		AssignmentMenuFactory.getAssignmentMenu(Facade.UserType).showAssignmentMenu();
 	}
 	
 	public void showViewButton() {
-		theCourseMenu.showViewButton();
+		
 	}
 	
 	public void showRadios() {
-		theCourseMenu.showRadios();
+		
 	}
 	
 	public void showComboxes() {
-		theCourseMenu.showComboxes();
+		
 	}
 	
 	public void showLabels() {
-		theCourseMenu.showLabels();
+		
 	}
 	
 	public void setCourseLevel(int courseLevel) {

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import courses.CourseController;
+import factories.AssignmentMenuFactory;
 import factories.PersonFactory;
 import iterators.CourseIterator;
 import iterators.ListIterator;
@@ -44,7 +45,7 @@ public class Facade {
 	}
 	
 	public void addAssignment() {
-		thePerson.getCourseMenu().showAddButton();
+		AssignmentMenuFactory.getAssignmentMenu(Facade.UserType).showAssignmentMenu();
 	}
 	
 	public void viewAssignment() {

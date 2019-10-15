@@ -6,16 +6,10 @@ import hasc.Facade;
 
 public class Student extends Person{
 
-
 	@Override
 	public void showMenu() {
-		System.out.println("\n----------------------\nMenu for Student");
+		System.out.println("\n----------------------\nMenu for Student");	
 		theCourseMenu.showMenu();
-		showAddButton();
-		showViewButton();
-		showRadios();
-		showComboxes();
-		showLabels();
 		System.out.println("----------------------");
 	}
 
