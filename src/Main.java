@@ -34,7 +34,8 @@ public class Main {
 //		
 		
 		Facade f = new Facade();
-		f.login();
+		f.createCourseList();
+		f.selectCourse();
 		
 		
 	}
