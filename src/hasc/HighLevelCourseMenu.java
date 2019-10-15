@@ -5,12 +5,12 @@ public class HighLevelCourseMenu extends CourseMenu{
 	
 	@Override
 	public void showAddButton() {
-		System.out.println("Show: HLC");
+		System.out.println("Add Assignment: HLC");
 	}
 
 	@Override
 	public void showViewButton() {
-		System.out.println("View: HLC");
+		System.out.println("View Assignment: HLC");
 		
 	}
 

@@ -30,14 +30,15 @@ public class Main {
 		
 //		Person p = new Student();
 //		p.setCourseLevel(Facade.HIGH_COURSE_LEVEL);
-//		p.setCourseLevel(Facade.LOW_COURSE_LEVEL);
-//		
-		
+//		p.setCourseLevel(Facade.LOW_COURSE_LEVEL);	
+
 		Facade f = new Facade();
+		f.login();
 		f.createCourseList();
 		f.selectCourse();
-		
-		
+		f.courseOperation();
+		f.thePerson.showMenu();
+		f.addAssignment();
 	}
 	
 }

@@ -44,7 +44,7 @@ public class Facade {
 	}
 	
 	public void addAssignment() {
-		
+		thePerson.getCourseMenu().showAddButton();
 	}
 	
 	public void viewAssignment() {

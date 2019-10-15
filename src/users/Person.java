@@ -13,6 +13,7 @@ public abstract class Person {
 	public abstract void createCourseMenu();
 	
 	public void showAddButton() {
+		
 		theCourseMenu.showAddButton();
 	}
 	
@@ -36,6 +37,10 @@ public abstract class Person {
 		this.courseLevel = courseLevel;
 		createCourseMenu();
 		showMenu();
+	}
+	
+	public CourseMenu getCourseMenu() {
+		return theCourseMenu;
 	}
 	
 }

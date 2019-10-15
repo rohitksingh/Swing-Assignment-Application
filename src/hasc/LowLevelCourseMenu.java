@@ -4,12 +4,12 @@ public class LowLevelCourseMenu extends CourseMenu{
 
 	@Override
 	public void showAddButton() {
-		System.out.println("Show: LLC");
+		System.out.println("Add Assignment: LLC");
 	}
 
 	@Override
 	public void showViewButton() {
-		System.out.println("View: LLC");
+		System.out.println("Show Assigment: LLC");
 		
 	}
 
