@@ -12,6 +12,7 @@ import iterators.SolutionIterator;
 import users.Person;
 import users.Student;
 import visitor.NodeVisitor;
+import visitor.Reminder;
 import visitor.ReminderVisitor;
 
 public class Main {
@@ -90,9 +91,11 @@ public class Main {
 		
 		
 		NodeVisitor nodeVisitor = new ReminderVisitor();
-		ser515.accept(nodeVisitor);
 		
-		junit.accept(nodeVisitor);
+		Reminder reminder = new Reminder(nodeVisitor);
+		reminder.visitCourse(ser515);
+		reminder.visitAssignment(junit);
+		
 		
 		
 	}
