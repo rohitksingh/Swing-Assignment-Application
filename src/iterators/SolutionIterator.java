@@ -1,12 +1,14 @@
 package iterators;
 import java.util.List;
 
+import courses.Solution;
+
 public class SolutionIterator extends ListIterator{
 	
 	private int currentItem;
-	private List<String> soultionList;
+	private List<Solution> soultionList;
 	
-    public SolutionIterator(List<String> soultionList) {
+    public SolutionIterator(List<Solution> soultionList) {
 		this.soultionList = soultionList;
 	}
 	

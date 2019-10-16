@@ -10,19 +10,21 @@ import iterators.ListIterator;
 
 public class CourseController {
 
-	private List<String> courseList;
+	private List<Course> courseList;
 	private ListIterator iterator;
 	private Scanner sc = new Scanner(System.in);
 	
 	public void createAllCourses() {
-		courseList = new ArrayList<String>();
-		courseList.add("CSE870");
-		courseList.add("CSE880");
-		courseList.add("CSE890");
+		courseList = new ArrayList<Course>();
+		
+		
+		courseList.add(new Course("CSE870"));
+		courseList.add(new Course("CSE880"));
+		courseList.add(new Course("CSE890"));
 		iterator = new CourseIterator(courseList);
 	}
 	
-	public List<String> getAllCourses() {
+	public List<Course> getAllCourses() {
 		return courseList;
 	}
 	
@@ -42,7 +44,7 @@ public class CourseController {
 		do {
 			 selection = sc.nextInt();
 		}while(!checkinputValidity(1, 3, selection));
-		String selectedCourse = courseList.get(selection-1);
+		String selectedCourse = courseList.get(selection-1).name;
 		
 		System.out.println("Select Level");
 		showCourseLevel();

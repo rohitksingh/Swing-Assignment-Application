@@ -2,6 +2,7 @@ package hasc;
 import java.util.List;
 import java.util.Scanner;
 
+import courses.Course;
 import courses.CourseController;
 import factories.AssignmentMenuFactory;
 import factories.PersonFactory;
@@ -24,7 +25,7 @@ public class Facade {
 	public static final int HIGH_COURSE_LEVEL = 0;
 	public static final int LOW_COURSE_LEVEL = 1;
 	
-	private List<String> theCourseList;
+	private List<Course> theCourseList;
 	
 	public Person thePerson;
 	

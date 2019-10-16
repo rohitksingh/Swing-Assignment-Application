@@ -1,13 +1,15 @@
 package iterators;
 import java.util.List;
 
+import courses.Course;
+
 public class CourseIterator extends ListIterator{
 	
 	
 	private int currentItem;
-	private List<String> courseList;
+	private List<Course> courseList;
 	
-    public CourseIterator(List<String> courseList) {
+    public CourseIterator(List<Course> courseList) {
 		this.courseList = courseList;
 	}
 	

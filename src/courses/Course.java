@@ -36,6 +36,11 @@ public class Course {
 	public void accept(NodeVisitor nodeVisitor) {
 		nodeVisitor.visitCourse(this);
 	}
+	
+	@Override
+	public String toString() {
+		return name;
+	}
 		
 	
 }
