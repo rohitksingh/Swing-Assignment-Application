@@ -2,6 +2,7 @@ package hasc;
 import java.util.List;
 import java.util.Scanner;
 
+import courses.Assignment;
 import courses.Course;
 import courses.CourseController;
 import factories.AssignmentMenuFactory;
@@ -45,11 +46,11 @@ public class Facade {
 	}
 	
 	public void addAssignment() {
-		AssignmentMenuFactory.getAssignmentMenu(Facade.UserType).showAssignmentMenu();
+		//AssignmentMenuFactory.getAssignmentMenu(Facade.UserType).showAssignmentMenu();
 	}
 	
-	public void viewAssignment() {
-		
+	public void viewAssignment(Assignment assignment, int usertype) {
+		AssignmentMenuFactory.getAssignmentMenu(usertype, assignment).showAssignmentMenu();
 	}
 	
 	public void gradeSolution() {

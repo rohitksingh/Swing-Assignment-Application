@@ -1,10 +1,17 @@
 package assignments;
 
-public class AssignmentMenu {
+import courses.Assignment;
 
-	public void showAssignmentMenu() {
-		System.out.println("Show Assignment menu");
+public abstract class AssignmentMenu {
+
+	public Assignment assignment;
+	
+	public AssignmentMenu(Assignment assignment) {
+		this.assignment = assignment;
 	}
 	
+	public abstract void showAssignmentMenu();
 	
+	protected abstract void showOptions();
+		
 }

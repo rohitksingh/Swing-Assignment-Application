@@ -50,7 +50,9 @@ public class Main {
 		f.thePerson.showMenu();
 		f.addAssignment();
 		
-		
+		Assignment junit = new Assignment("Junit", "DEC 10");
+		f.viewAssignment(junit, Facade.UserType);
+	
 		/*
 		List<Course> courselist = new ArrayList<Course>();
 		
@@ -95,6 +97,13 @@ public class Main {
 		reminder.visitCourse(ser515);
 		reminder.visitAssignment(junit);	
 		*/	
+		
+		
+		
+	
+		
+		
+		
 	}
 	
 }

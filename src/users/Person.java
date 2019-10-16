@@ -16,7 +16,7 @@ public abstract class Person {
 	public abstract void createCourseMenu();
 	
 	public void showAddButton() {
-		AssignmentMenuFactory.getAssignmentMenu(Facade.UserType).showAssignmentMenu();
+		//AssignmentMenuFactory.getAssignmentMenu(Facade.UserType).showAssignmentMenu();
 	}
 	
 	public void showViewButton() {
