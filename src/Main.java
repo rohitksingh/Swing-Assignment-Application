@@ -40,18 +40,18 @@ public class Main {
 //		p.setCourseLevel(Facade.LOW_COURSE_LEVEL);	
 
 		
-//		Login n Stuff
-//		
-//		Facade f = new Facade();
-//		f.login();
-//		f.createCourseList();
-//		f.selectCourse();
-//		f.courseOperation();
-//		f.thePerson.showMenu();
-//		f.addAssignment();
+	
+		
+		Facade f = new Facade();
+		f.login();
+		f.createCourseList();
+		f.selectCourse();
+		f.courseOperation();
+		f.thePerson.showMenu();
+		f.addAssignment();
 		
 		
-		
+		/*
 		List<Course> courselist = new ArrayList<Course>();
 		
 		
@@ -89,15 +89,12 @@ public class Main {
 		ClassCourseList classCourseList = new ClassCourseList();
 		classCourseList.setCourselist(courselist);
 		
-		
 		NodeVisitor nodeVisitor = new ReminderVisitor();
 		
 		Reminder reminder = new Reminder(nodeVisitor);
 		reminder.visitCourse(ser515);
-		reminder.visitAssignment(junit);
-		
-		
-		
+		reminder.visitAssignment(junit);	
+		*/	
 	}
 	
 }
