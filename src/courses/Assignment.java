@@ -8,7 +8,7 @@ public class Assignment {
 
 	public String name;
 	public String duedate;
-	
+	public String description;
 	public List<Solution> solutions;
 	
 	public Assignment() {
@@ -43,6 +43,19 @@ public class Assignment {
 	
 	public void accept(NodeVisitor nodeVisitor) {
 		nodeVisitor.visitAssgnment(this);
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+	@Override
+	public String toString() {
+		return "Assignment: "+name+"\n"+"Due Date: "+duedate+"\n\n"+description;
 	}
 	
 }

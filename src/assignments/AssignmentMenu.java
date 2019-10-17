@@ -13,5 +13,7 @@ public abstract class AssignmentMenu {
 	public abstract void showAssignmentMenu();
 	
 	protected abstract void showOptions();
+	
+	protected abstract void showAssignmentDetail();
 		
 }

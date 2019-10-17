@@ -11,6 +11,7 @@ public class StudentAssignmentMenu extends AssignmentMenu{
 	@Override
 	public void showAssignmentMenu() {
 		System.out.println("Show Student Assignment menu");
+		showAssignmentDetail();
 		showOptions();
 	}
 
@@ -29,5 +30,14 @@ public class StudentAssignmentMenu extends AssignmentMenu{
 	     * 	
 	     */
 	}
+
+	@Override
+	protected void showAssignmentDetail() {
+	
+		System.out.println(assignment);
+		
+	}
+
+	
 		
 }
