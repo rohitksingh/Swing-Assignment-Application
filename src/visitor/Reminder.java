@@ -9,8 +9,8 @@ public class Reminder {
 
 	private NodeVisitor nodeVisitor;
 	
-	public Reminder(NodeVisitor nodeVisitor){
-		this.nodeVisitor = nodeVisitor;
+	public Reminder(){
+		nodeVisitor = new ReminderVisitor();
 	}
 	
 	public void visitFacade(Facade facade) {

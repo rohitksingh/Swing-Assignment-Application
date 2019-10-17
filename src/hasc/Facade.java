@@ -29,7 +29,7 @@ public class Facade {
 	public static final int HIGH_COURSE_LEVEL = 0;
 	public static final int LOW_COURSE_LEVEL = 1;
 	
-	private List<Course> theCourseList;
+	public static List<Course> theCourseList;
 	
 	public Person thePerson;
 	
@@ -99,7 +99,8 @@ public class Facade {
 	}
 	
 	public void selectCourse() {
-		theSelectedCourse = courseController.selectCourse();
+		Facade f = this;
+		theSelectedCourse = courseController.selectCourse(this);
 	}
 	
 	public void courseOperation() {

@@ -6,12 +6,23 @@ import courses.Assignment;
 import courses.ClassCourseList;
 import courses.Course;
 import hasc.Facade;
+import iterators.CourseIterator;
+import iterators.ListIterator;
 
 public class ReminderVisitor extends NodeVisitor{
 
+	private ListIterator iterator;
+	
 	@Override
 	public void visitFacade(Facade facade) {
 	    
+		List<Course> courses = Facade.theCourseList;
+		iterator = new CourseIterator(courses);
+		int index = 0;
+		while(iterator.hasNext()) {
+			System.out.println(++index+")) "+iterator.next());
+		}
+		
 	}
 
 	@Override

@@ -7,6 +7,8 @@ import java.util.Scanner;
 import hasc.Facade;
 import iterators.CourseIterator;
 import iterators.ListIterator;
+import visitor.NodeVisitor;
+import visitor.Reminder;
 
 public class CourseController {
 
@@ -15,31 +17,25 @@ public class CourseController {
 	private Scanner sc = new Scanner(System.in);
 	
 	public void createAllCourses() {
-		courseList = new ArrayList<Course>();
 		
+		Facade.theCourseList = getDummyCourseList();
 		
-		courseList.add(new Course("CSE870"));
-		courseList.add(new Course("CSE880"));
-		courseList.add(new Course("CSE890"));
-		iterator = new CourseIterator(courseList);
 	}
 	
 	public List<Course> getAllCourses() {
 		return courseList;
 	}
 	
-	private void showAllCourses() {
+	private void showAllCourses(Facade facade) {
 		
-		int index=1;
-		while(iterator.hasNext())
-		{
-			System.out.println(index++ +") "+iterator.next());
-		}
+		Reminder reminder = new Reminder();
+		reminder.visitFacade(facade);
+		
 	}
 	
-	public String selectCourse() {
+	public String selectCourse(Facade facade) {
 		System.out.println("Select Course");
-		showAllCourses();
+		showAllCourses(facade);
 		int selection;
 		do {
 			 selection = sc.nextInt();
@@ -84,6 +80,16 @@ public class CourseController {
 			System.out.println("Invalid Input! Type your input again");
 			return false;
 		}
+	}
+	
+	private List<Course> getDummyCourseList() {
+		
+		courseList = new ArrayList<Course>();	
+		courseList.add(new Course("CSE870"));
+		courseList.add(new Course("CSE880"));
+		courseList.add(new Course("CSE890"));
+		
+		return courseList;
 	}
 	
 }
