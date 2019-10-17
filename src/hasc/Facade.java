@@ -46,7 +46,7 @@ public class Facade {
 	
 	public void login() {
 		login.login();
-		createUser();
+		createUser(UserType);
 	}
 	
 	public void addAssignment(Assignment assignment, int usertype) {
@@ -83,10 +83,10 @@ public class Facade {
 		System.out.println("Assignment Due on Monday 11:59 PM");
 	}
 	
-	public void createUser() {
+	public void createUser(int usertype) {
 		
 		// Use of factory method design pattern
-		thePerson = PersonFactory.getPerson(UserType);
+		thePerson = PersonFactory.getPerson(usertype);
 	}
 	
 	
