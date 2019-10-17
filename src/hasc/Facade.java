@@ -49,9 +49,10 @@ public class Facade {
 		createUser();
 	}
 	
-	public void addAssignment() {
+	public void addAssignment(Assignment assignment, int usertype) {
 		//AssignmentMenuFactory.getAssignmentMenu(Facade.UserType).showAssignmentMenu();
 		//assignmentController.
+		assignmentController.viewAssignment(assignment, usertype);
 	}
 	
 	public void viewAssignment(Assignment assignment, int usertype) {
@@ -102,6 +103,9 @@ public class Facade {
 	}
 	
 	public void courseOperation() {
+		
+		// Use of Bridge Pattern
+		// The course menu is getting generated based on the UserType and nCourseLevel
 		thePerson.createCourseMenu();
 	}
 	

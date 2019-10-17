@@ -20,7 +20,8 @@ public abstract class Person {
 	public abstract void createCourseMenu();
 	
 	public void showAddButton() {
-		
+		Facade f = new Facade();
+		f.addAssignment(AssignmentController.getDummyAssignment(), Facade.UserType);
 	}
 	
 	public void showViewButton() {
@@ -29,15 +30,15 @@ public abstract class Person {
 	}
 	
 	public void showRadios() {
-		
+		System.out.println("Clicked on Radio Button");
 	}
 	
 	public void showComboxes() {
-		
+		System.out.println("Clicked on ComBox");
 	}
 	
 	public void showLabels() {
-		
+		System.out.println("Clicked on Label");
 	}
 	
 	public void setCourseLevel(int courseLevel) {

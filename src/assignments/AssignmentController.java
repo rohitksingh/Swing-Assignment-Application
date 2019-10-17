@@ -15,6 +15,8 @@ public class AssignmentController{
 	private Scanner sc = new Scanner(System.in);
 	
 	public void viewAssignment(Assignment assignment, int usertype) {
+		
+		// Use of Assignment design pattern
 		AssignmentMenuFactory.getAssignmentMenu(usertype, assignment).showAssignmentMenu();
 	}
 	
