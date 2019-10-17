@@ -68,9 +68,9 @@ public class Login {
 		sc.nextLine();
 		
 		do {
-			System.out.println("Enter your username");
+			System.out.println("Enter your username: (HINT-> rohit)");
 			username = sc.next();
-			System.out.println("Enter your password");
+			System.out.println("Enter your password: (HINT-> 1234)");
 			password = sc.next();
 			
 		}while(!validateCredentials(username, password));

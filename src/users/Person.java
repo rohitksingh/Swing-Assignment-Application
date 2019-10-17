@@ -20,11 +20,13 @@ public abstract class Person {
 	public abstract void createCourseMenu();
 	
 	public void showAddButton() {
+		// Use of Facade Pattern
 		Facade f = new Facade();
 		f.addAssignment(AssignmentController.getDummyAssignment(), Facade.UserType);
 	}
 	
 	public void showViewButton() {
+		// Use of Facade Pattern
 		Facade f = new Facade();
 		f.viewAssignment(AssignmentController.getDummyAssignment(), Facade.UserType);
 	}
