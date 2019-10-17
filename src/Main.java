@@ -25,6 +25,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		testBridgePattern();
+		
 		//VISITOR PATTERN
 		//Uncomment to check Visitor Pattern
 		//testReminderVisitFacade();
@@ -59,12 +61,12 @@ public class Main {
 		
 	
 		// Normal Flow
-		Facade f = new Facade();
-		f.login();
-		f.createCourseList();
-		f.selectCourse();
-		f.courseOperation();
-		f.thePerson.showMenu();
+//		Facade f = new Facade();
+//		f.login();
+//		f.createCourseList();
+//		f.selectCourse();
+//		f.courseOperation();
+//		f.thePerson.showMenu();
 		
 		
 //		
@@ -142,12 +144,7 @@ public class Main {
 		reminder.visitAssignment(junit);	
 		*/	
 		
-		
-		
-	
-		
-		
-		
+
 	}
 	
 	
@@ -250,14 +247,44 @@ public class Main {
 		
 	}
 	
-	private static void testBridgePattern() {
+	private static void testBridgePattern1() {
 		
 		Facade f = new Facade();
 		f.createUser(Facade.USER_STUDENT);
-		
+		Facade.nCourseLevel = Facade.HIGH_COURSE_LEVEL;
+		f.thePerson.createCourseMenu();
+		f.thePerson.showMenu();
+			
 	}
 	
+	private static void testBridgePattern2() {
+		
+		Facade f = new Facade();
+		f.createUser(Facade.USER_STUDENT);
+		Facade.nCourseLevel = Facade.LOW_COURSE_LEVEL;
+		f.thePerson.createCourseMenu();
+		f.thePerson.showMenu();
+			
+	}
+
+	private static void testBridgePattern3() {
 	
+		Facade f = new Facade();
+		f.createUser(Facade.USER_INSTRUCTOR);
+		Facade.nCourseLevel = Facade.HIGH_COURSE_LEVEL;
+		f.thePerson.createCourseMenu();
+		f.thePerson.showMenu();
+		
+	}
+
+	private static void testBridgePattern4() {
 	
+		Facade f = new Facade();
+		f.createUser(Facade.USER_INSTRUCTOR);
+		Facade.nCourseLevel = Facade.LOW_COURSE_LEVEL;
+		f.thePerson.createCourseMenu();
+		f.thePerson.showMenu();
+		
+	}
 	
 }
