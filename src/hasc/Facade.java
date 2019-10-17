@@ -63,39 +63,19 @@ public class Facade {
 		
 		assignmentController.gradeSolution(assignment);
 		
-//		System.out.println("Grade the solution for: "+assignment.name);
-//		System.out.println("\n\n");
-//		ListIterator solutionIterator = new SolutionIterator(assignment.solutions);
-//		
-//		while(solutionIterator.hasNext()) {
-//			System.out.println("Grade the solution out of 10: "+solutionIterator.next());
-//			int marks = sc.nextInt();
-//		}
-//		System.out.println("Assignment Graded");
 		
 	}
 	
 	public void reportSolutions(List<Solution> solutions) {
 		
 		assignmentController.reportSolutions(solutions);
-//		System.out.println("Following solutions have been reported");
-//		ListIterator solutionIterator = new SolutionIterator(solutions);
-//		while(solutionIterator.hasNext()) {
-//			System.out.println(solutionIterator.next());
-//		}
+
 	}
 	
 	public void submitSolution(Assignment assignment) {
 		
 		assignmentController.submitSolution(assignment);
-		
-//		ListIterator solutionIterator = new SolutionIterator(assignment.solutions);
-//		System.out.println("Solution for "+assignment.name);
-//		while(solutionIterator.hasNext()) {
-//			System.out.println(solutionIterator.next());
-//		}
-//		System.out.println("\n\nSubmitted!");
-		
+				
 	}
 	
 	public void remind() {
