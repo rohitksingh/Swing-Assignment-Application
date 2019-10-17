@@ -64,6 +64,7 @@ public class Facade {
 			System.out.println("Grade the solution out of 10: "+solutionIterator.next());
 			int marks = sc.nextInt();
 		}
+		System.out.println("Assignment Graded");
 		
 	}
 	
