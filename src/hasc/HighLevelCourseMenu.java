@@ -5,23 +5,23 @@ public class HighLevelCourseMenu extends CourseMenu{
 	
 	@Override
 	public void showAddButton() {
-		System.out.println("Add Assignment: HLC");
+		System.out.println("1) Add Assignment: HLC");
 	}
 
 	@Override
 	public void showViewButton() {
-		System.out.println("View Assignment: HLC");
+		System.out.println("2) View Assignment: HLC");
 		
 	}
 
 	@Override
 	public void showRadios() {
-		System.out.println("Radios: HLC");
+		System.out.println("3) Radios: HLC");
 	}
 
 	@Override
 	public void showLabels() {
-		System.out.println("Labels: HLC");
+		System.out.println("4) Labels: HLC");
 	}
 	
 

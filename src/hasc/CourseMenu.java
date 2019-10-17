@@ -3,16 +3,17 @@ package hasc;
 public abstract class CourseMenu {
 	
 	public void showMenu() {
-		System.out.println("CourseMenu");
+		System.out.println("CourseMenu\n----------------");
 		showAddButton();
 		showViewButton();
 		showRadios();
 		showLabels();
 		showComboxes();
+		System.out.println("--------------------\nSELECT OPTION");
 	}
 	
 	public void showComboxes() {
-		System.out.println("This is combox");
+		System.out.println("5) This is combox");
 	}
 	
 	public abstract void showAddButton();
