@@ -25,15 +25,35 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		testBridgePattern();
+		//BRIDGE PATTERN:  4 Different variation uncomment one by one to test
+		//testBridgePattern1();
+		//testBridgePattern2();
+		//testBridgePattern3();
+		//testBridgePattern4();
 		
-		//VISITOR PATTERN
-		//Uncomment to check Visitor Pattern
+		//VISITOR PATTERN:  3 Different variation uncomment one by one to test
+		
 		//testReminderVisitFacade();
 		//testReminderVisitCourse();
 		//testReminderVisitAssignment();
 	
-		//Factory-Method Pattern;
+		//Factory-Method Pattern: Uncomment to see   
+		//testFactoryPattern();
+		
+		//ITERATOR PATTERN: 2 variation, uncomment one by one to test  
+		//testCourseIterator();
+		//testSolutionIterator();
+		
+		// DEMO APPLICATION
+		/*
+		Facade f = new Facade();
+		f.login();
+		f.createCourseList();
+		f.selectCourse();
+		f.courseOperation();
+		f.thePerson.showMenu();
+		*/
+		
 		
 		
 		
@@ -284,6 +304,49 @@ public class Main {
 		Facade.nCourseLevel = Facade.LOW_COURSE_LEVEL;
 		f.thePerson.createCourseMenu();
 		f.thePerson.showMenu();
+		
+	}
+	
+	private static void testCourseIterator() {
+		
+		Course ser531 = new Course("SER531");
+		Course ser515 = new Course("SER515");
+		Course ser501 = new Course("SER501");
+		List<Course> courselist = new ArrayList<Course>();
+		courselist.add(ser501);
+		courselist.add(ser515);
+		courselist.add(ser531);
+		ListIterator  iterator = new CourseIterator(courselist);
+		
+		System.out.println("All Courses");
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		
+	}
+	
+	private static void testSolutionIterator() {
+		
+		Solution ans1 = new Solution("This is answer 1");
+		Solution ans2 = new Solution("This is answer 2");
+		Solution ans3 = new Solution("This is answer 3");
+		Solution ans4 = new Solution("This is answer 4");
+		Solution ans5 = new Solution("This is answer 5");
+		List<Solution> solutionList = new ArrayList<Solution>();
+		solutionList.add(ans1);
+		solutionList.add(ans2);
+		solutionList.add(ans3);
+		solutionList.add(ans4);
+		solutionList.add(ans5);
+		Assignment assignment = new Assignment("Junit", "Dec 12");
+		assignment.setSolutions(solutionList);
+		
+		ListIterator  iterator = new SolutionIterator(solutionList);
+	
+		System.out.println("All Solution for "+assignment.name);
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());		
+		}
 		
 	}
 	
