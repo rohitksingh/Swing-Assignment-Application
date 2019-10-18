@@ -21,7 +21,7 @@ import visitor.NodeVisitor;
 import visitor.Reminder;
 import visitor.ReminderVisitor;
 
-public class Main {
+public class HASC {
 
 	public static void main(String[] args) {
 		
@@ -54,14 +54,19 @@ public class Main {
 		
 		// Check following files to see usage of patterns //
 		
-		// Usage of Facade Pattern
-		/* InstructorAssignmentMenu.java    ---> grade(), reportSolutions()
+		// Use of FACADE PATTERN
+		/* Classes involved: Facade.java 
+		 * 
+		 * InstructorAssignmentMenu.java    ---> grade(), reportSolutions()
 		 * StudentAssignmentMenu.java 		 ---> submitSolution();
 		 */
 		
 		
-		// Factory
-		/* AssignmentController.java  ---> viewAssignment(Assignment assignment, int usertype)
+		// Use of FACTORY METHOD PATTERN
+		/*Classes involved:  
+		 * AssignmentMenuFactory.java, CourseMenuFactory.java, PersonFactory.java 
+		 * 
+		 *  AssignmentController.java  ---> viewAssignment(Assignment assignment, int usertype)
 		 * AssignmentMenuFactory.java ---> getAssignmentMenu(int usertype, Assignment assignment)
 		 * CourseMenuFactory.java     ---> getCourseMenu(int courseLevel)
 		 * PersonFactory.java 		  ---> getPerson(int UserType)
@@ -71,13 +76,15 @@ public class Main {
 		 */
 		
 		
-		// Iterator 
-		/* InstructorAssignmentMenu.java -->showSolution()
+		// Use of ITERATOR DESIGN PATTERN 
+		/* Classes involved:  CourseIterator, ListIterator, SolutionIterator
+		 * 
+		 * InstructorAssignmentMenu.java -->showSolution()
 		 * SolutionMenu.java 			 -->reportSolutions(List<Solution> solutions), gradeSolution(Assignment assignment), submitSolution(Assignment assignment) 
 		 */
 		
 		
-		//Visitor 
+		//Use if VISITOR DESIGN PATTERN 
 		/*Classes involved:   Reminder,NodeVisitor,ReminderVisitor   ---- Facade, Course, Assignment    
 		 * 
 		 * CourseController.java  --> showAllCourses(Facade facade)
@@ -86,9 +93,8 @@ public class Main {
 		 * 
 		 */
 		
-		//Bridge 
-		/*
-		 * Classes involved 	(Bridge 1)		Person, Student, Instructor --- CourseMenu, HighLevelCourseMenu, LowLevelCourseMenu
+		//Use of BRIDGE DESIGN PATTERN 
+		/* Classes involved 	(Bridge 1)		Person, Student, Instructor --- CourseMenu, HighLevelCourseMenu, LowLevelCourseMenu
 		 * Classes involved 	(Bridge 2)		Person, Student, Instructor --- AssignmentMenu, StudentAssignmentMenu, InstructorAssignmentMenu
 		 *  
 		 * AssignmentController.java 			---> viewAssignment(Assignment assignment, int usertype)
