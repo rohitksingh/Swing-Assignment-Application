@@ -45,7 +45,6 @@ public class Main {
 		//testSolutionIterator();
 		
 		// DEMO APPLICATION
-		
 		Facade f = new Facade();
 		f.login();
 		f.createCourseList();
