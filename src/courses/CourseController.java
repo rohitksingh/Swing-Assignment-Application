@@ -5,15 +5,11 @@ import java.util.List;
 import java.util.Scanner;
 
 import hasc.Facade;
-import iterators.CourseIterator;
-import iterators.ListIterator;
-import visitor.NodeVisitor;
 import visitor.Reminder;
 
 public class CourseController {
 
 	private List<Course> courseList;
-	private ListIterator iterator;
 	private Scanner sc = new Scanner(System.in);
 	
 	public void createAllCourses() {
@@ -52,6 +48,7 @@ public class CourseController {
 	}
 	
 	private String getCourseLevel(int selection) {
+		
 		String courseLevel = null;
 		switch(selection) {
 		case Facade.LOW_COURSE_LEVEL:

@@ -2,8 +2,6 @@ package courses;
 
 import java.util.List;
 
-import visitor.NodeVisitor;
-
 public class ClassCourseList {
 
 	public List<Course> courselist;

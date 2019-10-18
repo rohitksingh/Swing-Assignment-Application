@@ -3,7 +3,6 @@ package login;
 import java.util.Scanner;
 
 import hasc.Facade;
-import users.Person;
 
 public class Login {
 	

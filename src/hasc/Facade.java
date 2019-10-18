@@ -7,15 +7,9 @@ import assignments.AssignmentController;
 import courses.Course;
 import courses.CourseController;
 import courses.Solution;
-import factories.AssignmentMenuFactory;
 import factories.PersonFactory;
-import iterators.CourseIterator;
-import iterators.ListIterator;
-import iterators.SolutionIterator;
 import login.Login;
-import users.Instructor;
 import users.Person;
-import users.Student;
 import visitor.Reminder;
 
 public class Facade {
@@ -33,9 +27,7 @@ public class Facade {
 	public static List<Course> theCourseList;
 	
 	public Person thePerson;
-	
-	private Scanner sc = new Scanner(System.in);
-	
+		
 	private Login login;
 	private CourseController courseController;
 	private AssignmentController assignmentController;
@@ -44,7 +36,6 @@ public class Facade {
 	public Facade() {
 		initResources();
 	}
-	
 	
 	public void login() {
 		login.login();
@@ -64,7 +55,6 @@ public class Facade {
 	public void gradeSolution(Assignment assignment) {
 		
 		assignmentController.gradeSolution(assignment);
-		
 		
 	}
 	

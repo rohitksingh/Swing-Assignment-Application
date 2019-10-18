@@ -3,7 +3,6 @@ package visitor;
 import java.util.List;
 
 import assignments.Assignment;
-import courses.ClassCourseList;
 import courses.Course;
 import hasc.Facade;
 import iterators.CourseIterator;

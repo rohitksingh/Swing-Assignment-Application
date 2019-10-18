@@ -2,7 +2,6 @@ package hasc;
 
 public class HighLevelCourseMenu extends CourseMenu{
 
-	
 	@Override
 	public void showAddButton() {
 		System.out.println("1) Add Assignment: High Level Course");

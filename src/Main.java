@@ -45,12 +45,12 @@ public class Main {
 		//testSolutionIterator();
 		
 		// DEMO APPLICATION
-		Facade f = new Facade();
-		f.login();
-		f.createCourseList();
-		f.selectCourse();
-		f.courseOperation();
-		f.thePerson.showMenu();
+//		Facade f = new Facade();
+//		f.login();
+//		f.createCourseList();
+//		f.selectCourse();
+//		f.courseOperation();
+//		f.thePerson.showMenu();
 		
 
 	}

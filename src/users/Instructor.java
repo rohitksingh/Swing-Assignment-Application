@@ -1,8 +1,6 @@
 package users;
 
 import factories.CourseMenuFactory;
-import hasc.CourseMenu;
-import hasc.Facade;
 
 public class Instructor extends Person{
 
