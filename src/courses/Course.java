@@ -2,6 +2,7 @@ package courses;
 
 import java.util.List;
 
+import assignments.Assignment;
 import visitor.NodeVisitor;
 
 public class Course {

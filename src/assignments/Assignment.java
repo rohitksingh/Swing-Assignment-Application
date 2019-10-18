@@ -1,7 +1,8 @@
-package courses;
+package assignments;
 
 import java.util.List;
 
+import courses.Solution;
 import visitor.NodeVisitor;
 
 public class Assignment {

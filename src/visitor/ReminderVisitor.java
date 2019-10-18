@@ -2,7 +2,7 @@ package visitor;
 
 import java.util.List;
 
-import courses.Assignment;
+import assignments.Assignment;
 import courses.ClassCourseList;
 import courses.Course;
 import hasc.Facade;

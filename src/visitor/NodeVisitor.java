@@ -1,6 +1,6 @@
 package visitor;
 
-import courses.Assignment;
+import assignments.Assignment;
 import courses.Course;
 import hasc.Facade;
 

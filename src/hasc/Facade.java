@@ -2,8 +2,8 @@ package hasc;
 import java.util.List;
 import java.util.Scanner;
 
+import assignments.Assignment;
 import assignments.AssignmentController;
-import courses.Assignment;
 import courses.Course;
 import courses.CourseController;
 import courses.Solution;

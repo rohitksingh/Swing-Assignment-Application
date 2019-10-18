@@ -1,13 +1,10 @@
 package factories;
 
+import assignments.Assignment;
 import assignments.AssignmentMenu;
 import assignments.InstructorAssignmentMenu;
 import assignments.StudentAssignmentMenu;
-import courses.Assignment;
-import hasc.CourseMenu;
 import hasc.Facade;
-import hasc.HighLevelCourseMenu;
-import hasc.LowLevelCourseMenu;
 
 public class AssignmentMenuFactory {
 

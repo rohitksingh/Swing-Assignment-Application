@@ -3,7 +3,6 @@ package assignments;
 import java.util.ArrayList;
 import java.util.List;
 
-import courses.Assignment;
 import courses.Solution;
 import hasc.Facade;
 import iterators.ListIterator;
