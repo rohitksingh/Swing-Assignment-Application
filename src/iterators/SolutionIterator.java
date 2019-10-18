@@ -1,7 +1,7 @@
 package iterators;
 import java.util.List;
 
-import courses.Solution;
+import solution.Solution;
 
 public class SolutionIterator extends ListIterator{
 	

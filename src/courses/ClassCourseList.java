@@ -2,6 +2,10 @@ package courses;
 
 import java.util.List;
 
+import com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
+
+import visitor.NodeVisitor;
+
 public class ClassCourseList {
 
 	public List<Course> courselist;
@@ -13,6 +17,5 @@ public class ClassCourseList {
 	public void setCourselist(List<Course> courselist) {
 		this.courselist = courselist;
 	}
-	
 	
 } 

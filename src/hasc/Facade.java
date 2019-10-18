@@ -6,9 +6,10 @@ import assignments.Assignment;
 import assignments.AssignmentController;
 import courses.Course;
 import courses.CourseController;
-import courses.Solution;
 import factories.PersonFactory;
 import login.Login;
+import solution.Solution;
+import solution.SolutionMenu;
 import users.Person;
 import visitor.Reminder;
 
@@ -28,10 +29,11 @@ public class Facade {
 	
 	public Person thePerson;
 		
-	private Login login;
-	private CourseController courseController;
-	private AssignmentController assignmentController;
-	private Reminder reminder;
+	private Login login;										// This is Login component
+	private CourseController courseController;                  // This is CourseMenu component     :(Name changed for simplicity)
+	private AssignmentController assignmentController;			// This is AssignmentMenu component :(Name changed for simplicity)
+	private Reminder reminder;									// This is Reminder Component
+	private SolutionMenu solutionMenu;							// This is SolutionMenu Component
 	
 	public Facade() {
 		initResources();
@@ -54,19 +56,19 @@ public class Facade {
 	
 	public void gradeSolution(Assignment assignment) {
 		
-		assignmentController.gradeSolution(assignment);
+		solutionMenu.gradeSolution(assignment);
 		
 	}
 	
 	public void reportSolutions(List<Solution> solutions) {
 		
-		assignmentController.reportSolutions(solutions);
+		solutionMenu.reportSolutions(solutions);
 
 	}
 	
 	public void submitSolution(Assignment assignment) {
 		
-		assignmentController.submitSolution(assignment);
+		solutionMenu.submitSolution(assignment);
 				
 	}
 	
@@ -102,10 +104,13 @@ public class Facade {
 	}
 	
 	private void initResources() {
+		
 		login = new Login();
 		courseController = new CourseController();
 		assignmentController = new AssignmentController();
 		reminder = new Reminder();
+		solutionMenu = new SolutionMenu();
+		
 	}
 	
 	

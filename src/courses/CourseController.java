@@ -22,12 +22,6 @@ public class CourseController {
 		return courseList;
 	}
 	
-	private void showAllCourses(Facade facade) {
-		
-		Reminder reminder = new Reminder();
-		reminder.visitFacade(facade);
-		
-	}
 	
 	public String selectCourse(Facade facade) {
 		System.out.println("Select Course");
@@ -45,6 +39,18 @@ public class CourseController {
 		}while(!checkinputValidity(0, 1, Facade.nCourseLevel));
 		System.out.println("Selected Course is: "+selectedCourse+" ("+getCourseLevel(Facade.nCourseLevel)+")");
 		return selectedCourse;
+	}
+	
+	/***************************************************************************************
+	 * 				Private Helper methods
+	 **************************************************************************************/
+	
+	
+	private void showAllCourses(Facade facade) {
+		
+		Reminder reminder = new Reminder();
+		reminder.visitFacade(facade);
+		
 	}
 	
 	private String getCourseLevel(int selection) {

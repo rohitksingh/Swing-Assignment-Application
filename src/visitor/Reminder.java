@@ -19,18 +19,21 @@ public class Reminder {
 	}
 	
 	public void visitCourse(Course course) {
-		nodeVisitor.visitCourse(course);
+		//nodeVisitor.visitCourse(course);
+		course.accept(nodeVisitor);
 	}
 	
 	public void visitAssignment(Assignment assignment) {
-		nodeVisitor.visitAssgnment(assignment);
+		//nodeVisitor.visitAssgnment(assignment);
+		assignment.accept(nodeVisitor);
 	}
 	
 	public void remind(List<Assignment> assignments) {
 		
 		System.out.println("Pending Assignments");
 		for(Assignment assignment : assignments) {
-			nodeVisitor.visitAssgnment(assignment);
+			//nodeVisitor.visitAssgnment(assignment);
+			assignment.accept(nodeVisitor);
 		}
 		
 	}

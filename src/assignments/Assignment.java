@@ -2,7 +2,7 @@ package assignments;
 
 import java.util.List;
 
-import courses.Solution;
+import solution.Solution;
 import visitor.NodeVisitor;
 
 public class Assignment {

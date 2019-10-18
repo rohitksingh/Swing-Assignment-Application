@@ -4,7 +4,6 @@ import java.util.List;
 import assignments.Assignment;
 import courses.ClassCourseList;
 import courses.Course;
-import courses.Solution;
 import factories.CourseMenuFactory;
 import factories.PersonFactory;
 import hasc.CourseMenu;
@@ -14,6 +13,7 @@ import hasc.LowLevelCourseMenu;
 import iterators.CourseIterator;
 import iterators.ListIterator;
 import iterators.SolutionIterator;
+import solution.Solution;
 import users.Instructor;
 import users.Person;
 import users.Student;
@@ -32,25 +32,68 @@ public class Main {
 		//testBridgePattern4();
 		
 		//VISITOR PATTERN:  3 Different variation uncomment one by one to test
-		
 		//testReminderVisitFacade();
 		//testReminderVisitCourse();
 		//testReminderVisitAssignment();
 	
-		//Factory-Method Pattern: Uncomment to see   
+		//FACTORY-METHOD PATTERN: Uncomment to see   
 		//testFactoryPattern();
 		
 		//ITERATOR PATTERN: 2 variation, uncomment one by one to test  
 		//testCourseIterator();
 		//testSolutionIterator();
 		
-		// DEMO APPLICATION
-//		Facade f = new Facade();
-//		f.login();
-//		f.createCourseList();
-//		f.selectCourse();
-//		f.courseOperation();
-//		f.thePerson.showMenu();
+		// DEMO APPLICATION        
+		Facade f = new Facade();
+		f.login();
+		f.createCourseList();
+		f.selectCourse();
+		f.courseOperation();
+		f.thePerson.showMenu();
+		
+		
+		// Check following files to see usage of patterns //
+		
+		// Usage of Facade Pattern
+		/* InstructorAssignmentMenu.java    ---> grade(), reportSolutions()
+		 * StudentAssignmentMenu.java 		 ---> submitSolution();
+		 */
+		
+		
+		// Factory
+		/* AssignmentController.java  ---> viewAssignment(Assignment assignment, int usertype)
+		 * AssignmentMenuFactory.java ---> getAssignmentMenu(int usertype, Assignment assignment)
+		 * CourseMenuFactory.java     ---> getCourseMenu(int courseLevel)
+		 * PersonFactory.java 		  ---> getPerson(int UserType)
+		 * Student.java 			  ---> createCourseMenu()
+		 * Person.java				  ---> showAddButton(), showViewButton(), 
+		 * Instructor.java 			  ---> createCourseMenu()
+		 */
+		
+		
+		// Iterator 
+		/* InstructorAssignmentMenu.java -->showSolution()
+		 * SolutionMenu.java 			 -->reportSolutions(List<Solution> solutions), gradeSolution(Assignment assignment), submitSolution(Assignment assignment) 
+		 */
+		
+		
+		//Visitor 
+		/*Classes involved:   Reminder,NodeVisitor,ReminderVisitor   ---- Facade, Course, Assignment    
+		 * 
+		 * CourseController.java  --> showAllCourses(Facade facade)
+		 * Assignment.java 		  --> accept(NodeVisitor nodeVisitor)
+		 * Course.java			  --> accept(NodeVisitor nodeVisitor) 
+		 * 
+		 */
+		
+		//Bridge 
+		/*
+		 * Classes involved 	(Bridge 1)		Person, Student, Instructor --- CourseMenu, HighLevelCourseMenu, LowLevelCourseMenu
+		 * Classes involved 	(Bridge 2)		Person, Student, Instructor --- AssignmentMenu, StudentAssignmentMenu, InstructorAssignmentMenu
+		 *  
+		 * AssignmentController.java 			---> viewAssignment(Assignment assignment, int usertype)
+		 */
+		
 		
 
 	}

@@ -1,4 +1,4 @@
-package courses;
+package solution;
 
 public class Solution {
     

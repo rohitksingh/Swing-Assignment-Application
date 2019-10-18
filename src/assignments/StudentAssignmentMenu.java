@@ -3,8 +3,8 @@ package assignments;
 import java.util.ArrayList;
 import java.util.List;
 
-import courses.Solution;
 import hasc.Facade;
+import solution.Solution;
 
 public class StudentAssignmentMenu extends AssignmentMenu{
 	
@@ -60,6 +60,8 @@ public class StudentAssignmentMenu extends AssignmentMenu{
 	}
 	
 	private void submitSolution() {
+		
+		
 		Facade f = new Facade();
 		
 		Solution mySolution1 = new Solution("My Solution 1");
@@ -79,7 +81,5 @@ public class StudentAssignmentMenu extends AssignmentMenu{
 	private void solveSolution() {
 		
 	}
-
 	
-		
 }

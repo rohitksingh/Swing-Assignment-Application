@@ -17,6 +17,7 @@ public class Login {
 	}
 	
 	private void chooseUserType() {
+		
 		System.out.println("Welcome to HASC System");
 		System.out.println("You are? \n0) Student\n1) Instructor");
 		

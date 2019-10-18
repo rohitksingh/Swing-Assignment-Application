@@ -3,10 +3,10 @@ package assignments;
 import java.util.ArrayList;
 import java.util.List;
 
-import courses.Solution;
 import hasc.Facade;
 import iterators.ListIterator;
 import iterators.SolutionIterator;
+import solution.Solution;
 import visitor.NodeVisitor;
 import visitor.ReminderVisitor;
 
@@ -57,14 +57,16 @@ public class InstructorAssignmentMenu extends AssignmentMenu{
 	}
 	
 	private void showSolution() {
-		NodeVisitor nodeVisitor = new ReminderVisitor();
+		
 		System.out.println("Solutions\n------------------");
+		
+		// Iterator Pattern
 		ListIterator iterator = new SolutionIterator(assignment.solutions);
 		int index = 0;
 		while(iterator.hasNext()) {
 			System.out.println(++index+") "+iterator.next());
 		}
-		System.out.println("/n/n");
+		System.out.println("\n\n");
 	}
 	
 	private void grade() {
