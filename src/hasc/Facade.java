@@ -16,6 +16,7 @@ import login.Login;
 import users.Instructor;
 import users.Person;
 import users.Student;
+import visitor.Reminder;
 
 public class Facade {
 		
@@ -38,6 +39,7 @@ public class Facade {
 	private Login login;
 	private CourseController courseController;
 	private AssignmentController assignmentController;
+	private Reminder reminder;
 	
 	public Facade() {
 		initResources();
@@ -50,13 +52,12 @@ public class Facade {
 	}
 	
 	public void addAssignment(Assignment assignment, int usertype) {
-		//AssignmentMenuFactory.getAssignmentMenu(Facade.UserType).showAssignmentMenu();
-		//assignmentController.
+		
 		assignmentController.viewAssignment(assignment, usertype);
 	}
 	
 	public void viewAssignment(Assignment assignment, int usertype) {
-		//AssignmentMenuFactory.getAssignmentMenu(usertype, assignment).showAssignmentMenu();
+
 		assignmentController.viewAssignment(assignment, usertype);
 	}
 	
@@ -79,8 +80,8 @@ public class Facade {
 				
 	}
 	
-	public void remind() {
-		System.out.println("Assignment Due on Monday 11:59 PM");
+	public void remind(List<Assignment> assignments) {
+		reminder.remind(assignments);
 	}
 	
 	public void createUser(int usertype) {
@@ -94,12 +95,12 @@ public class Facade {
 		courseController.createAllCourses();
 	}
 	
-	public void attachCourseToUser() {
-		
+	public void attachCourseToUser(Course course) {
+		thePerson.addCourse(course);
 	}
 	
 	public void selectCourse() {
-		Facade f = this;
+	
 		theSelectedCourse = courseController.selectCourse(this);
 	}
 	
@@ -114,6 +115,7 @@ public class Facade {
 		login = new Login();
 		courseController = new CourseController();
 		assignmentController = new AssignmentController();
+		reminder = new Reminder();
 	}
 	
 	

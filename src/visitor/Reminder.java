@@ -1,5 +1,7 @@
 package visitor;
 
+import java.util.List;
+
 import courses.Assignment;
 import courses.ClassCourseList;
 import courses.Course;
@@ -23,6 +25,15 @@ public class Reminder {
 	
 	public void visitAssignment(Assignment assignment) {
 		nodeVisitor.visitAssgnment(assignment);
+	}
+	
+	public void remind(List<Assignment> assignments) {
+		
+		System.out.println("Pending Assignments");
+		for(Assignment assignment : assignments) {
+			nodeVisitor.visitAssgnment(assignment);
+		}
+		
 	}
 	
 }

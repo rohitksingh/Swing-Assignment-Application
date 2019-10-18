@@ -1,9 +1,11 @@
 package users;
 
+import java.util.List;
 import java.util.Scanner;
 
 import assignments.AssignmentController;
 import assignments.AssignmentMenu;
+import courses.Course;
 import factories.AssignmentMenuFactory;
 import factories.CourseMenuFactory;
 import hasc.CourseMenu;
@@ -14,6 +16,7 @@ public abstract class Person {
 	protected CourseMenu theCourseMenu;
 	protected int courseLevel;
 	private Scanner sc = new Scanner(System.in);
+	protected List<Course> courselist;
 		
 	public abstract void showMenu();
 	
@@ -91,6 +94,10 @@ public abstract class Person {
 		else
 			return null;
 
+	}
+	
+	public void addCourse(Course course) {
+		System.out.println(course+" Added");
 	}
 	
 }
