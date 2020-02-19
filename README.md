@@ -1,2 +1,10 @@
-# HASC-Assignment
-Implemented five design patterns into the Homework Assignment Distribution and Collection System (HACS)
+# Swing Application
+
+**Design Patterns Implemented** 
+
+- BRIDGE PATTERN
+- VISITOR PATTERN
+- FACTORY-METHOD PATTERN
+- FACADE PATTERN
+- ITERATOR DESIGN PATTERN
+
